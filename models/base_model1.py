@@ -3,6 +3,7 @@
 from uuid import uuid4
 import os
 from datetime import datetime
+import models
 
 
 class BaseModel:
@@ -19,8 +20,9 @@ class BaseModel:
                 if key != "__class__":
                     setattr(self, key, value)
         else:
-             self.id = str(uuid4())
-             self.created_at = self.updated_at = datetime.now()
+            from models import storage
+            self.id = str(uuid4())
+            self.created_at = self.updated_at = datetime.now()
 
 
     def __str__(self):
@@ -33,6 +35,8 @@ class BaseModel:
         """Save the new changes with the actual time
         """
         self.updated_at = datetime.now()
+        models.storage.new(self)
+        models.storage.save()
     
     def to_dict(self):
         """Representation in a dictionary of an instance
