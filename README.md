@@ -1,4 +1,4 @@
-[![Airbnbconsole.png](https://i.postimg.cc/nhyPbv9H/Airbnbconsole.png)](https://postimg.cc/NKx4R2xV)
+[align = "center"![Airbnbconsole.png](https://i.postimg.cc/nhyPbv9H/Airbnbconsole.png)](https://postimg.cc/NKx4R2xV)
 # AirBnB Clone - The Console
 ## Learning Objectives
 ------------
